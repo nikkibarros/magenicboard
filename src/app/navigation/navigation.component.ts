@@ -1,3 +1,4 @@
+import { MiddlemanService } from './../services/middleman/middleman.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
-  constructor() { }
+  constructor(private middlemanService: MiddlemanService) { }
 
   ngOnInit() {
   }
 
+  toggleBoardPopup(): void {
+    this.middlemanService.toggleBoardPopup();
+  }
 }

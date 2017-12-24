@@ -1,0 +1,5 @@
+.boards {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
