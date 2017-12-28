@@ -10,6 +10,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 })
 export class NewBoardComponent implements OnInit, OnDestroy {
   private destroyed$ = new Subject();
+  title: string;
   showThis = false;
 
   constructor(private middlemanService: MiddlemanService) { }
@@ -27,5 +28,13 @@ export class NewBoardComponent implements OnInit, OnDestroy {
 
   toggleNewBoard(): void {
     this.showThis = !this.showThis;
+  }
+
+  close(): void {
+    this.showThis = false;
+  }
+
+  create(): void {
+    // todo
   }
 }

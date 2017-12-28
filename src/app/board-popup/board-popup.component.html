@@ -1,39 +1,13 @@
-<div class="row" *ngIf="showThis" (blur)="blurBoardPopup()">
-  <p>
-    board-popup works!
-  </p>
-  <!-- <div class="boards">
-    <div class="board" *ngFor="let board of boards">
-      <div class="header">
-        <div class="name">{{ module.name }}</div>
-        <i class="fa {{ module.icon }} fa-3x"></i>
-      </div>
-      <div class="body">
-    
-        <div class="description">{{ module.description }}</div>
-    
-        <div class="links">
-    
-          <span *ngFor="let link of module.links">
-            <a [routerLink]="link.path">{{ link.text }}</a>
-            <br />
-          </span>
-    
-        </div>
-    
-        <div class="buttons">
-    
-          <span *ngFor="let button of module.buttons">
-            <a class="k-button btn-module" [routerLink]="button.path">{{ button.text }}</a>
-            <br />
-          </span>
-    
-        </div>
-    
-      </div>
-    </div>
-  </div> -->
+<div style="z-index: 10; width: 250px" class="border border-dark bg-white" *ngIf="showThis" (blur)="blurBoardPopup()">
+  <div class="board" *ngFor="let board of boards">
+    <span>
+      <!-- <a class="k-button btn-board">{{ board.name }}</a> -->
+      <a class="btn btn-secondary">{{ board.name }}</a>
+      <br />
+    </span>
+  </div>
   <div>
     <button type="button" class="btn btn-primary" (click)="addNewBoard()">Add New Board</button>
+    <!-- <app-new-board></app-new-board> -->
   </div>
 </div>
