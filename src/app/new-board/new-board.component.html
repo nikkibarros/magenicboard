@@ -1,5 +1,14 @@
-<div class="row" *ngIf="showThis">
-  <p>
-    new-board works!
-  </p>
+<div style="z-index: 12; width: 250px; padding: 0 25px;" class="border border-dark bg-white" *ngIf="showThis">
+  <div style="text-align:center">
+    New Board
+    <button type="button" class="close" aria-label="Close" (click)="close()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div>
+    <input type="text" [(ngModel)]="title">
+  </div>
+  <div>
+    <button type="button" class="btn btn-primary" (click)="create()">Create</button>
+  </div>
 </div>

@@ -1,3 +1,4 @@
+import { Board } from './../models/board';
 import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/takeUntil';
 
@@ -11,6 +12,10 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 })
 export class BoardPopupComponent implements OnInit, OnDestroy {
   private destroyed$ = new Subject();
+  boards: Board[] = [
+    new Board('Board 1'),
+    new Board('Board 2')
+  ];
   showThis = false;
 
   constructor(private middlemanService: MiddlemanService) { }

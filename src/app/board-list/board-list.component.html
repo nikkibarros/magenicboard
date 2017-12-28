@@ -1,36 +1,14 @@
-<div class="row">
-  <p>
+<div style="position: absolute">
+  <!-- <p>
     board-list works!
-  </p>
-  <!-- <div class="boards">
+  </p> -->
+  <div class="boards">
     <div class="board" *ngFor="let board of boards">
-      <div class="header">
-        <div class="name">{{ module.name }}</div>
-        <i class="fa {{ module.icon }} fa-3x"></i>
-      </div>
-      <div class="body">
-    
-        <div class="description">{{ module.description }}</div>
-    
-        <div class="links">
-    
-          <span *ngFor="let link of module.links">
-            <a [routerLink]="link.path">{{ link.text }}</a>
-            <br />
-          </span>
-    
-        </div>
-    
-        <div class="buttons">
-    
-          <span *ngFor="let button of module.buttons">
-            <a class="k-button btn-module" [routerLink]="button.path">{{ button.text }}</a>
-            <br />
-          </span>
-    
-        </div>
-    
-      </div>
+      <span>
+        <!-- <a class="k-button btn-board">{{ board.name }}</a> -->
+        <a class="btn btn-secondary btn-lg">{{ board.name }}</a>
+        <br />
+      </span>
     </div>
-  </div> -->
+  </div>
 </div>
