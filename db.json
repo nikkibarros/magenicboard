@@ -1,0 +1,41 @@
+{
+   "boards":[
+      {
+         "name":"Board1",
+         "cardsLists":[
+            {
+               "name":"To Do",
+               "cards":[
+                  {
+                     "task":"Check weird thing"
+                  }
+               ]
+            },
+            {
+               "name":"In Progress",
+               "cards":[
+                  {
+                     "task":"Magenic Masters: Angular 4"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name":"Board2",
+         "cardsLists":[
+            {
+               "name":"To Do",
+               "cards":[
+                  {
+                     "task":"Check issue"
+                  },
+                  {
+                     "task":"Implement thing"
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}
