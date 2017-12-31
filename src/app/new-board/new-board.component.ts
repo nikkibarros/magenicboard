@@ -1,3 +1,5 @@
+import { BoardComponent } from './../board/board.component';
+import { Router } from '@angular/router';
 import { Board } from './../models/board';
 import { BoardsService } from './../services/boards/boards.service';
 import { MiddlemanService } from './../services/middleman/middleman.service';
@@ -38,7 +40,8 @@ export class NewBoardComponent implements OnInit, OnDestroy {
 
   create(): void {
     if (this.title !== '') {
-      const board = new Board(this.title);
+      const path = '/' + this.title.replace(' ', '-').toLowerCase();
+      const board = new Board(this.title, path);
 
       this.boardsService.create(board)
         .subscribe(
