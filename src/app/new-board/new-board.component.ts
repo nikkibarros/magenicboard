@@ -1,3 +1,5 @@
+import { Board } from './../models/board';
+import { BoardsService } from './../services/boards/boards.service';
 import { MiddlemanService } from './../services/middleman/middleman.service';
 import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/takeUntil';
@@ -13,7 +15,7 @@ export class NewBoardComponent implements OnInit, OnDestroy {
   title: string;
   showThis = false;
 
-  constructor(private middlemanService: MiddlemanService) { }
+  constructor(private middlemanService: MiddlemanService, public boardsService: BoardsService) { }
 
   ngOnInit() {
     this.middlemanService.toggleNewBoard$.takeUntil(this.destroyed$).subscribe(
@@ -35,6 +37,18 @@ export class NewBoardComponent implements OnInit, OnDestroy {
   }
 
   create(): void {
-    // todo
+    if (this.title !== '') {
+      const board = new Board(this.title);
+
+      this.boardsService.create(board)
+        .subscribe(
+          value => {
+            this.middlemanService.refreshBoardList();
+          }
+        );
+
+      this.title = '';
+      this.toggleNewBoard();
+    }
   }
 }

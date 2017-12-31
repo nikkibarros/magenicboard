@@ -5,9 +5,11 @@ import { Injectable } from '@angular/core';
 export class MiddlemanService {
   private toggleBoardPopupSubject: Subject<boolean> = new Subject<boolean>();
   private toggleNewBoardSubject: Subject<boolean> = new Subject<boolean>();
+  private refreshBoardListSubject: Subject<boolean> = new Subject<boolean>();
 
   public toggleBoardPopup$ = this.toggleBoardPopupSubject.asObservable();
   public toggleNewBoard$ = this.toggleNewBoardSubject.asObservable();
+  public refreshBoardList$ = this.refreshBoardListSubject.asObservable();
 
   constructor() { }
 
@@ -17,5 +19,9 @@ export class MiddlemanService {
 
   toggleNewBoard(): void {
     this.toggleNewBoardSubject.next();
+  }
+
+  refreshBoardList(): void {
+    this.refreshBoardListSubject.next();
   }
 }
