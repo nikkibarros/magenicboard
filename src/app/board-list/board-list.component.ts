@@ -34,4 +34,8 @@ export class BoardListComponent implements OnInit, OnDestroy {
       this.boards = values;
     }, error => this.errorMessage = error);
   }
+
+  goToBoard(board: Board): void {
+    this.middlemanService.goToBoard(board);
+  }
 }

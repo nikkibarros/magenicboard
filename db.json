@@ -2,11 +2,18 @@
   "boards": [
     {
       "id": 1,
-      "name": "Board1"
+      "name": "Board1",
+      "path": "/board1"
     },
     {
       "id": 2,
-      "name": "Board2"
+      "name": "Board2",
+      "path": "/board2"
+    },
+    {
+      "name": "huhu",
+      "path": "/huhu",
+      "id": 3
     }
   ],
   "cardsLists": [

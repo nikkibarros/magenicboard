@@ -58,4 +58,9 @@ export class BoardPopupComponent implements OnInit, OnDestroy {
   addNewBoard(): void {
     this.middlemanService.toggleNewBoard();
   }
+
+  goToBoard(board: Board): void {
+    this.middlemanService.goToBoard(board);
+    this.toggleBoardPopup();
+  }
 }
