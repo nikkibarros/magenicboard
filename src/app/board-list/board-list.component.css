@@ -1,0 +1,30 @@
+.boards {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+.board {  
+    padding-right: 10px;
+    padding-bottom: 20px;
+}
+
+.btn-board {
+    width: 250px;	
+    margin: 3px;
+    font-size: 1.4rem;
+    padding: 9px;
+}
+
+.k-button{
+    background-color:  #858585;
+    border-style: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 5px;
+    background-image: none;  
+    padding: 6px 18px;
+    text-decoration: none;
+    font-weight: 500;
+}

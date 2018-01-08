@@ -1,50 +1,58 @@
 {
-    "boards": [
-        {
-            "id": 1,
-            "name": "Board1",
-            "cardsLists": [
-                {
-                    "id": 1,
-                    "name": "To Do",
-                    "cards": [
-                        {
-                            "id": 1,
-                            "task": "Check weird thing"
-                        }
-                    ]
-                },
-                {
-                    "id": 2,
-                    "name": "In Progress",
-                    "cards": [
-                        {
-                            "id": 2,
-                            "task": "Magenic Masters: Angular 4"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "id": 2,
-            "name": "Board2",
-            "cardsLists": [
-                {
-                    "id": 3,
-                    "name": "To Do",
-                    "cards": [
-                        {
-                            "id": 3,
-                            "task": "Check issue"
-                        },
-                        {
-                            "id": 4,
-                            "task": "Implement thing"
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+  "boards": [
+    {
+      "id": 1,
+      "name": "Board1",
+      "path": "/board1"
+    },
+    {
+      "id": 2,
+      "name": "Board2",
+      "path": "/board2"
+    },
+    {
+      "name": "huhu",
+      "path": "/huhu",
+      "id": 3
+    }
+  ],
+  "cardsLists": [
+    {
+      "id": 1,
+      "name": "To Do",
+      "boardId": 1
+    },
+    {
+      "id": 2,
+      "name": "In Progress",
+      "boardId": 1
+    },
+    {
+      "id": 3,
+      "name": "To Do",
+      "boardId": 2
+    }
+  ],
+  "cards": [
+    {
+      "id": 1,
+      "task": "Check weird thing",
+      "cardsListId": 1
+    },
+    {
+      "id": 2,
+      "task": "Magenic Masters: Angular 4",
+      "cardsListId": 2
+    },
+    {
+      "id": 3,
+      "task": "Check issue",
+      "cardsListId": 3
+    },
+    {
+      "id": 4,
+      "task": "Implement thing",
+      "cardsListId": 3
+    }
+  ]
 }

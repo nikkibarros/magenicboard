@@ -1,0 +1,10 @@
+<div style="position: absolute">
+  <div class="boards">
+    <div class="board" *ngFor="let board of boards">
+      <span>
+        <a class="btn btn-secondary btn-lg" (click)="goToBoard(board)" routerLink="/b/{{board.path}}">{{ board.name }}</a>
+        <br />
+      </span>
+    </div>
+  </div>
+</div>

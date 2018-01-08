@@ -1,0 +1,11 @@
+<div style="z-index: 10; width: 250px" class="border border-dark bg-white" *ngIf="showThis" (blur)="blurBoardPopup()">
+  <div class="board" *ngFor="let board of boards">
+    <span>
+      <a class="btn btn-secondary" (click)="goToBoard(board)" routerLink="/b/{{board.path}}">{{ board.name }}</a>
+      <br />
+    </span>
+  </div>
+  <div>
+    <button type="button" class="btn btn-primary" (click)="addNewBoard()">Add New Board</button>
+  </div>
+</div>
